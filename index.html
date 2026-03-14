@@ -1,12 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamics 365 Chat Widget</title>
 </head>
 <body>
+    <h1>Dynamics 365 Demo Chat</h1>
+    <p>Click the chat icon in the bottom right to start.</p>
 
-<h1>Chat Demo</h1>
-<p>Dynamics 365 Contact Center</p>
-<script id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public-eur.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" onerror="(function(el){el.parentNode.removeChild(el);var s=document.createElement('script');s.src='https://ocprodpubliceurgs.blob.core.windows.net/livechatwidget/scripts/LiveChatBootstrapper.js';s.setAttribute('id', 'Microsoft_Omnichannel_LCWidget');s.setAttribute('data-app-id', 'b4dc7452-316f-4def-8781-815261f3096a');s.setAttribute('data-lcw-version', 'prod');s.setAttribute('data-org-id', '0ae87f6b-ac13-f111-afbe-000d3ad88e69');s.setAttribute('data-org-url', 'https://m-0ae87f6b-ac13-f111-afbe-000d3ad88e69.eu.omnichannelengagementhub.com');document.body.appendChild(s);})(this);" data-app-id="b4dc7452-316f-4def-8781-815261f3096a" data-lcw-version="prod" data-org-id="0ae87f6b-ac13-f111-afbe-000d3ad88e69" data-org-url="https://m-0ae87f6b-ac13-f111-afbe-000d3ad88e69.eu.omnichannelengagementhub.com" async></script>
+    <script>
+        function getLcwConfig() {
+            return {
+                "styleProps": {
+                    "generalStyles": {
+                        "width": "450px",
+                        "height": "660px",
+                        "bottom": "20px",
+                        "right": "20px"
+                    }
+                },
+                "headerProps": {
+                    "styleProps": {
+                        "generalStyleProps": {
+                            "background": "#195588"
+                        },
+                        "titleStyleProps": {
+                            "color": "#FFFFFF"
+                        },
+                        "minimizeButtonStyleProps": {
+                            "color": "#FFFFFF"
+                        },
+                        "closeButtonStyleProps": {
+                            "color": "#FFFFFF"
+                        }
+                    },
+                    "controlProps": {
+                        "headerTitleProps": {
+                            "text": "Let's chat"
+                        },
+                        "hideIcon": false,
+                        "hideTitle": false,
+                        "headerIconProps": {
+                            "src": "https://oc-cdn-ocprod.azureedge.net/livechatwidget/images/ChatBot.svg",
+                            "alt": "Let's chat"
+                        }
+                    }
+                },
+                "webChatContainerProps": {
+                    "webChatStyles": {
+                        "bubbleFromUserBackground": "#195588",
+                        "bubbleFromUserTextColor": "#FFFFFF",
+                        "bubbleBackground": "#E6F0F5",
+                        "bubbleTextColor": "#424242",
+                        "sendBoxBackground": "#F5F8FB",
+                        "sendBoxTextColor": "#424242",
+                        "botAvatarBackgroundColor": "#195588",
+                        "suggestedActionBorderColor": "#195588",
+                        "suggestedActionTextColor": "#195588"
+                    },
+                    "renderingMiddlewareProps": {
+                        "sentMessageAnchorStyles": {
+                            "color": "#ffffff"
+                        },
+                        "receivedMessageAnchorStyles": {
+                            "color": "#0000FF"
+                        },
+                        "avatarStyleProps": {
+                            "backgroundColor": "#15658A"
+                        },
+                        "avatarTextStyleProps": {
+                            "color": "#FFFFFF"
+                        }
+                    }
+                },
+                "loadingPaneProps": {
+                    "styleProps": {
+                        "generalStyleProps": {
+                            "background": "#195588"
+                        }
+                    }
+                },
+                "chatButtonProps": {
+                    "styleProps": {
+                        "iconStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    },
+                    "controlProps": {
+                        "titleText": "Let's chat",
+                        "subtitleText": "We're Online",
+                        "avatarUrl": "-"
+                    }
+                },
+                "confirmationPaneProps": {
+                    "styleProps": {
+                        "confirmButtonStyleProps": {
+                            "backgroundColor": "#195588"
+                        },
+                        "confirmButtonFocusedStyleProps": {
+                            "backgroundColor": "#195588"
+                        },
+                        "confirmButtonHoveredStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    }
+                },
+                "emailTranscriptPane": {
+                    "styleProps": {
+                        "sendButtonStyleProps": {
+                            "backgroundColor": "#195588"
+                        },
+                        "sendButtonHoveredStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    }
+                },
+                "postChatLoadingPaneProps": {
+                    "styleProps": {
+                        "generalStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    }
+                },
+                "preChatSurveyPaneProps": {
+                    "styleProps": {
+                        "customButtonStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    }
+                },
+                "proactiveChatPaneProps": {
+                    "styleProps": {
+                        "headerContainerStyleProps": {
+                            "backgroundColor": "#195588"
+                        },
+                        "startButtonStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    }
+                },
+                "reconnectChatPaneProps": {
+                    "styleProps": {
+                        "continueChatButtonStyleProps": {
+                            "backgroundColor": "#195588"
+                        }
+                    }
+                }
+            };
+        }
+    </script>
+
+    <script 
+        v2
+        id="Microsoft_Omnichannel_LCWidget" 
+        src="https://oc-cdn-public-eur.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" 
+        onerror="(function(el){el.parentNode.removeChild(el);var s=document.createElement('script');s.src='https://ocprodpubliceurgs.blob.core.windows.net/livechatwidget/scripts/LiveChatBootstrapper.js';s.setAttribute('id', 'Microsoft_Omnichannel_LCWidget');s.setAttribute('data-app-id', 'b4dc7452-316f-4def-8781-815261f3096a');s.setAttribute('data-lcw-version', 'prod');s.setAttribute('data-org-id', '0ae87f6b-ac13-f111-afbe-000d3ad88e69');s.setAttribute('data-org-url', 'https://m-0ae87f6b-ac13-f111-afbe-000d3ad88e69.eu.omnichannelengagementhub.com');document.body.appendChild(s);})(this);" 
+        data-app-id="b4dc7452-316f-4def-8781-815261f3096a" 
+        data-lcw-version="prod" 
+        data-org-id="0ae87f6b-ac13-f111-afbe-000d3ad88e69" 
+        data-org-url="https://m-0ae87f6b-ac13-f111-afbe-000d3ad88e69.eu.omnichannelengagementhub.com" 
+        data-customization-callback="getLcwConfig"
+        async>
+    </script>
 </body>
 </html>
