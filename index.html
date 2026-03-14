@@ -3,59 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamics 365 Chat Widget</title>
+    <title>Ekerö Estates | Modern Real Estate</title>
     <style>
         /* Modern CSS Reset and Variables */
         :root {
-            --primary-color: #195588;
-            --bg-color: #f4f7f9;
-            --text-color: #333333;
-            --card-bg: #ffffff;
+            --primary-color: #195588; /* Matches your chat widget */
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --bg-light: #f9f9f9;
         }
 
-        body {
-            /* Modern system fonts for a clean look */
-            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+        body, html {
             margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Navigation Bar */
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 25px 50px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            /* Uses a high-quality Unsplash placeholder image with a dark overlay */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-        }
-
-        /* Card styling for the welcome text */
-        .welcome-card {
-            background-color: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             text-align: center;
-            max-width: 450px;
-            width: 90%;
+            padding: 0 20px;
         }
 
-        h1 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 28px;
-            font-weight: 600;
+        .hero h1 {
+            font-size: 56px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
 
-        p {
-            font-size: 16px;
-            color: #555555;
+        .hero p {
+            font-size: 20px;
+            color: #e0e0e0;
+            max-width: 650px;
             line-height: 1.6;
-            margin-bottom: 0;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #124066;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <div class="welcome-card">
-        <h1>Welcome to Support</h1>
-        <p>We are here to help you. Click the chat icon in the bottom right corner to start a conversation with our team.</p>
-    </div>
+    <header>
+        <div class="logo">Ekerö Estates</div>
+        <nav>
+            <a href="#">Properties</a>
+            <a href="#">Developments</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Discover Modern Living in Ekerö</h1>
+        <p>Exclusive properties and architectural masterpieces designed for the contemporary lifestyle. Explore our latest developments today.</p>
+        <a href="#" class="cta-button">View Properties</a>
+    </section>
 
     <script>
         function getLcwConfig() {
